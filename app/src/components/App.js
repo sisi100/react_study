@@ -2,24 +2,25 @@ import React from 'react';
 
 class App extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = {count: 0};
+    super(props)
+    this.state = { value: '' }
+    this.handleChange = this.handleChange.bind(this)
   }
-  
-  handleClick(){
-    let newCount = this.state.count + 1
-    this.setState({count:newCount})
+
+  handleChange(e) {
+    let msg = e.target.value
+    this.setState({ value: msg })
   }
-  
+
   render() {
     return (
-    	<div>
-        <h1>押してください。</h1>
-        <p>{this.state.count}回押しました！</p>
-        <button onClick={() => {this.handleClick()}}>押す</button>
+      <div>
+        <p>入力値：{this.state.value}</p>
+        <textarea value={this.state.value} onChange={this.handleChange} cols="30" rows="5"/>
       </div>
-    );
+    )
   }
 }
 
 export default App;
+
