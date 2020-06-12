@@ -1,0 +1,14 @@
+ul {
+    overflow: hidden;
+    letter-spacing: -.5em;
+}
+li {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+    letter-spacing: 0;
+    text-align: center;
+}
+textarea{
+    width: 100%;
+}

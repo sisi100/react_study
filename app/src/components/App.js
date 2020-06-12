@@ -15,8 +15,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <p>入力値：{this.state.value}</p>
-        <textarea value={this.state.value} onChange={this.handleChange} cols="30" rows="5"/>
+        <ul>
+          <li>Twitter向け文字カウンター</li>
+          <li>{this.state.value.length}/280</li>
+        </ul>
+
+        <textarea value={this.state.value} onChange={this.handleChange} cols="30" rows="10"/>
       </div>
     )
   }
